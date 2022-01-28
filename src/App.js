@@ -9,7 +9,6 @@ function App() {
   );
 }
 
-
 function Menu(props){
 	return(
 	<nav className='Menu'>

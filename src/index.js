@@ -3,21 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Clock from './Clock'
+import Weather from './Weather'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-	// <div >
-	// 	<div>
-	// 		<Avatar user={{name:"Masha"}}/>
-	// 	</div>
-	// 	<Comment text='teste' date="1.10.2017" author={{name:"MyName"}}/>
-	// 	<div>
-	// 		<UserInfo user={{name:"Dima Catik"}}/>
-	// 	</div>
-	// </div>
+
 	document.getElementById('root')
 );
 

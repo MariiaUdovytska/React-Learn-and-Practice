@@ -91,11 +91,16 @@ h6 {
 
 /*--------------------*/
 
+html, body{
+	height:100%;
+}
+body {
+	background: linear-gradient(to bottom right, #dae1e9, 80%, #0e7ad6) no-repeat;
+}
 .App {
   font-size: 16px;
 }
 .Wrapper {
-  background-color: rgb(255, 227, 227);
 }
 .Header {
   display: flex;
@@ -108,8 +113,8 @@ h6 {
   display: flex;
   align-items: center;
 }
-.LogoWName img {
-  margin-right: 6vh;
+.bi-cloud-sun-fill::before{
+	display: block!important;
 }
 .Menu {
 }
@@ -119,4 +124,104 @@ h6 {
 }
 .UlMenu li {
   margin-right: 6vh;
+}
+
+.Weather__search {
+}
+.Weather__search-form {
+  margin: 20px 0px 0px 10px;
+  display: flex;
+}
+.Weather__input {
+  background-color: rgb(252, 228, 228);
+  width: 230px;
+  height: 40px;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  padding-left: 10px;
+  background-clip: unset;
+  border: unset;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 0;
+}
+.Weather__input:focus {
+  width: 226px;
+  height: 36px;
+  border: 2px solid rgb(229, 194, 194);
+}
+
+.Weather__btn {
+  background-color: rgb(229, 194, 194);
+  height: 40px;
+  width: 40px;
+  border: unset;
+  border-top-left-radius: 0;
+  border-top-right-radius: 7px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 7px;
+}
+.Weather__btn:hover .Weather__search-form {
+  border: 2px solid rgb(229, 194, 194);
+}
+.Weather__btn-img img {
+  display: block;
+}
+
+.Weather {
+  margin-top: 30px;
+  display: inline-block;
+  line-height: 1.1;
+  padding: 10px;
+  max-width: 300px;
+}
+.Weather__city {
+  font-size: 25px;
+  font-weight: 700;
+  color: #39393a;
+}
+.Weather__temp {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 36px;
+  color: #39393a;
+}
+.Weather__temp-maxmin {
+  margin: 10px;
+  font-size: 20px;
+}
+.Weather__temp-maxmin span:first-child {
+  margin-right: 10px;
+}
+.Weather__description {
+  font-size: 20px;
+  font-weight: 500;
+}
+.Weather__description-second {
+  display: inline-block;
+}
+.Weather__description-second::first-letter {
+  text-transform: uppercase;
+}
+
+.Weather__more {
+  color: #535355;
+  margin: 10px 0px;
+}
+.Weather__items {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 20px;
+  border-left: 1px solid #eb6e4b;
+  padding-left: 20px;
+}
+.Weather__items li {
+  margin-right: 16px;
+}
+
+.Tick {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

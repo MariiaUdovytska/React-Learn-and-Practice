@@ -1,6 +1,9 @@
 import React from 'react';
 import LocalTime from './LocalTime';
+import weatherResponse from './data/weatherResponse.json'
 
+
+var isDebug = true;
 
 
 class Weather extends React.Component {
@@ -26,7 +29,31 @@ class Weather extends React.Component {
 		this.loadData();
 	}
 
+	mapData = (datafff) => {
+		this.setState({
+			isLoaded: true,
+			weather: datafff.main,
+			city:datafff.name,
+			icons:datafff.weather[0].icon,
+			countries:datafff.sys.country,
+			descriptions:datafff.weather[0].description,
+			humidities:datafff.main.humidity,
+			pressures:datafff.main.pressure,
+			speeds:datafff.wind.speed,
+			visibilities:datafff.visibility,
+			timezone:datafff.timezone
+		});
+		console.log(datafff)
+		console.log(this.state.weather);
+	}
 	loadData = ()=>{
+
+		if(isDebug){
+			this.mapData(weatherResponse);
+			return;
+		}
+
+		console.log("get data from api!!");
 		fetch(`https://community-open-weather-map.p.rapidapi.com/weather?q=${this.props.location}&units=metric`, {
 			"method": "GET",
 			"headers": {
@@ -36,30 +63,13 @@ class Weather extends React.Component {
 		})
 		.then(response => {
 			response.json()
-			.then(datafff => {
-				this.setState({
-					isLoaded: true,
-					weather: datafff.main,
-					city:datafff.name,
-					icons:datafff.weather[0].icon,
-					countries:datafff.sys.country,
-					descriptions:datafff.weather[0].description,
-					humidities:datafff.main.humidity,
-					pressures:datafff.main.pressure,
-					speeds:datafff.wind.speed,
-					visibilities:datafff.visibility,
-					timezone:datafff.timezone
-				});
-				console.log(datafff)
-				console.log(this.state.weather);
-			},
+			.then(this.mapData,
 			(error) => {
 				this.setState({
 					isLoaded: true,
 					error
 				});
-			}
-			)
+			});
 		})
 		.catch(err => {
 			console.error(err);

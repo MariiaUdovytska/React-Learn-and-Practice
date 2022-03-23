@@ -9,7 +9,7 @@ function App() {
 	return (
 		<div className="App">
 			<div className='Wrapper'>
-				<Header direction="Cities" firstHeader={{name:"Weather in any city"}}/>
+				<Header firstHeader={{name:"Weather in any city"}} direction="Cities"/>
 				<AddWeatherCities/>
 			</div>
 		</div>

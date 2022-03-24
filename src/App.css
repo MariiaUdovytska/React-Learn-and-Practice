@@ -114,10 +114,21 @@ body {
   font-size: 1.3rem;
   letter-spacing: 0.03rem;
   color: #1f1e1e;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.Header {
 }
 .LogoWName {
+  margin-left: 10px;
   display: flex;
   align-items: center;
+}
+.LogoWName:hover {
+  color: #12127e;
+}
+.Logo__name {
+  margin-left: 10px;
 }
 .bi-cloud-sun-fill::before {
   display: block !important;
@@ -131,6 +142,11 @@ body {
 }
 .UlMenu li {
   margin-right: 6vh;
+}
+.UlMenu li:hover {
+  transition: all ease 0.5s;
+  text-shadow: 5px 10px 8px #12127e;
+  color: #12127e;
 }
 
 .Weather__search {

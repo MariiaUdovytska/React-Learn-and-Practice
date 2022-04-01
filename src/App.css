@@ -129,12 +129,8 @@ body {
 .Logo__name {
   margin-left: 10px;
 }
-.Logo__img {
-}
 .container {
-  max-width: 1012px !important;
-}
-.bi-cloud-sun-fill::before {
+  max-width: 1352px !important;
 }
 
 .navbar-brand {
@@ -145,6 +141,15 @@ body {
   color: #1f1e1e !important;
   text-transform: uppercase;
   font-weight: 500;
+}
+.nav-link{
+	color:#1f1e1e!important;
+	font-size: 1.3rem!important;
+}
+.nav-link:hover{
+	color: #12127e !important;;
+	transition: all ease 0.5s;
+	text-shadow: 5px 5px 8px #0e7ad6;
 }
 
 .Menu {
@@ -163,14 +168,21 @@ body {
   color: #12127e;
 }
 
+
+
+
 .Weather__search {
 }
+.Weather__search-actions{
+	display: flex;
+	margin: 20px 0px 0px 10px;
+}
 .Weather__search-form {
-  margin: 20px 0px 0px 10px;
   display: flex;
+  margin-right: 20px;
 }
 .Weather__input {
-  background-color: rgb(252, 228, 228);
+  background-color: rgb(253, 232, 222);
   width: 230px;
   height: 40px;
   font-size: 18px;
@@ -184,13 +196,11 @@ body {
   border-bottom-right-radius: 0;
 }
 .Weather__input:focus {
-  width: 226px;
-  height: 36px;
-  border: 2px solid rgb(229, 194, 194);
+  border: 2px solid rgba(233, 138, 94, 0.747);
 }
 
 .Weather__btn {
-  background-color: rgb(229, 194, 194);
+  background-color: rgba(233, 138, 94, 0.747);
   height: 40px;
   width: 40px;
   border: unset;
@@ -205,6 +215,14 @@ body {
 .Weather__btn-img img {
   display: block;
 }
+
+.Weather__delete{
+	background-color: rgba(82, 131, 221, 0.938);
+	height: 40px;
+	width: 80px;
+	border-radius: 7px;
+}
+
 
 .Weather {
   margin-top: 30px;

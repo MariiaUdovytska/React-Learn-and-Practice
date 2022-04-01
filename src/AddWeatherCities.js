@@ -46,12 +46,17 @@ class AddWeatherCities extends React.Component {
 	render(){
 		return(
 			<div className='Weather__search'>
-				<form className='Weather__search-form' onSubmit={this.handleSearch}>
-					<input value={this.state.inputValue} onChange={this.handleUpdateInputValue} className='Weather__input' placeholder='city...' aria-label='Search'/>
-					<button type='submit' className='Weather__btn'>
-						<img src={icon_search} className='Weather__btn-img' alt='search' width={30} height={30}></img>
+				<div className='Weather__search-actions'>
+					<form className='Weather__search-form' onSubmit={this.handleSearch}>
+						<input value={this.state.inputValue} onChange={this.handleUpdateInputValue} className='Weather__input' placeholder='city...' aria-label='Search'/>
+						<button type='submit' className='Weather__btn'>
+							<img src={icon_search} className='Weather__btn-img' alt='search' width={30} height={30}></img>
+						</button>
+					</form>
+					<button className='Weather__delete' >
+						<i class="bi bi-trash3-fill" style={{ display: 'contents', fontSize: '30px', color: 'white'}}></i>
 					</button>
-				</form>
+				</div>
 				<WeatherCities cities={this.state.citiesArr}/>
 			</div>
 		)

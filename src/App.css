@@ -209,8 +209,11 @@ body {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 7px;
 }
-.Weather__btn:hover .Weather__search-form {
-  border: 2px solid rgb(229, 194, 194);
+
+.Weather__btn:hover{
+	border-top: 1px solid rgba(241, 128, 76, 0.747);
+	border-right: 1px solid rgba(241, 128, 76, 0.747);
+	border-bottom: 1px solid rgba(241, 128, 76, 0.747);
 }
 .Weather__btn-img img {
   display: block;
@@ -221,6 +224,9 @@ body {
 	height: 40px;
 	width: 80px;
 	border-radius: 7px;
+}
+.Weather__delete:hover{
+	background-color: rgba(50, 114, 233, 0.938);
 }
 
 

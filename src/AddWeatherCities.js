@@ -36,6 +36,13 @@ class AddWeatherCities extends React.Component {
 		localStorage.setItem("counterStore",counterCities+1);
 	}
 
+	handleDelete = (e) => {
+		localStorage.clear();
+		this.setState({
+			citiesArr: [{key:0, city:'London'}]
+		})
+	}
+
 	handleUpdateInputValue = (e)=> {
 		const val = e.target.value;
 		this.setState({
@@ -53,7 +60,7 @@ class AddWeatherCities extends React.Component {
 							<img src={icon_search} className='Weather__btn-img' alt='search' width={30} height={30}></img>
 						</button>
 					</form>
-					<button className='Weather__delete' >
+					<button onClick={this.handleDelete} type='button' className='Weather__delete' >
 						<i class="bi bi-trash3-fill" style={{ display: 'contents', fontSize: '30px', color: 'white'}}></i>
 					</button>
 				</div>

@@ -104,8 +104,6 @@ body {
 .App {
   font-size: 16px;
 }
-.Wrapper {
-}
 .Header {
   display: flex;
   flex-direction: row;
@@ -117,7 +115,6 @@ body {
   text-transform: uppercase;
   font-weight: 500;
 }
-
 .LogoWName {
   margin-left: 10px;
   display: flex;
@@ -152,27 +149,7 @@ body {
 	text-shadow: 5px 5px 8px #0e7ad6;
 }
 
-.Menu {
-}
-.UlMenu {
-  font-size: 1.3rem;
-  display: flex;
-  margin-bottom: 0;
-}
-.UlMenu li {
-  margin-right: 6vh;
-}
-.UlMenu li:hover {
-  transition: all ease 0.5s;
-  text-shadow: 5px 10px 8px #12127e;
-  color: #12127e;
-}
 
-
-
-
-.Weather__search {
-}
 .Weather__search-actions{
 	display: flex;
 	margin: 20px 0px 0px 10px;
@@ -200,6 +177,7 @@ body {
 }
 
 .Weather__btn {
+
   background-color: rgba(233, 138, 94, 0.747);
   height: 40px;
   width: 40px;

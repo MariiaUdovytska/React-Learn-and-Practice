@@ -11,8 +11,9 @@ function App() {
 		<div className="App">
 			<div className='Wrapper'>
 				<Navibar firstHeader={{name:"Weather in any city"}}/>
-				{/* <AddWeatherCities/> */}
 				<Forecast/>
+				<AddWeatherCities/>
+				
 			</div>
 		</div>
 	);

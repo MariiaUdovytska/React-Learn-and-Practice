@@ -1,6 +1,7 @@
 import React from 'react';
 import DataWeatherForecast from './DataWeatherForecast';
 import icon_search from './img/weather/icon_search.png'
+import './Forecast.css';
 
 class Forecast extends React.Component {
 	constructor(props) {

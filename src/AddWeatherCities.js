@@ -61,7 +61,7 @@ class AddWeatherCities extends React.Component {
 						</button>
 					</form>
 					<button onClick={this.handleDelete} type='button' className='Weather__delete' >
-						<i class="bi bi-trash3-fill" style={{ display: 'contents', fontSize: '30px', color: 'white'}}></i>
+						<i className="bi bi-trash3-fill" style={{ display: 'contents', fontSize: '30px', color: 'white'}}></i>
 					</button>
 				</div>
 				<WeatherCities cities={this.state.citiesArr}/>

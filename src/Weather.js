@@ -41,7 +41,7 @@ class Weather extends React.Component {
 			pressures:datafff.main.pressure,
 			speeds:datafff.wind.speed,
 			visibilities:datafff.visibility,
-			timezone:datafff.timezone
+			timezone:datafff.timezone/3600
 		});
 		console.log(datafff)
 		console.log(this.state.weather);

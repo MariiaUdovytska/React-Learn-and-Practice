@@ -1,4 +1,6 @@
 import React from 'react';
+import LocalTime from './LocalTime';
+import DaysForecast from './DaysForecast';
 import Forecast10 from './data/forecast-10.json'
 
 var isDebug = true;
@@ -6,6 +8,12 @@ var isDebug = true;
 class DataWeatherForecast extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			city:"",
+			country:"",
+			timezone:0,
+			days:[]
+		}
 	}
 
 	componentDidMount() {
@@ -13,8 +21,14 @@ class DataWeatherForecast extends React.Component {
 	}
 
 	mapData = (response) =>{
-		console.log(response);
+		this.setState({
+			city:response.city.name,
+			country:response.city.country,
+			timezone:response.city.timezone/3600,
+			days:response.list
+		})
 	}
+
 	loadData = ()=>{
 		if(isDebug){
 			this.mapData(Forecast10);
@@ -41,9 +55,17 @@ class DataWeatherForecast extends React.Component {
 	}
 
 	render(){
+		const {city, country, timezone, days} = this.state;
+		let daysForecastArr = [];
+		for(let i=0; i<days.length; i++){
+			daysForecastArr.push(<DaysForecast key={days[i].dt} informDay={days[i]}/>)
+		}
 		return(
-			<div className='forecast__cities'></div>
-			
+			<div>
+				<LocalTime timezone={timezone}/>
+				<div className='forecast__cities'>{city}, {country}</div>
+				{daysForecastArr}
+			</div>
 		)
 	}
 }

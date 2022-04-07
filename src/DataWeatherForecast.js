@@ -61,9 +61,9 @@ class DataWeatherForecast extends React.Component {
 			daysForecastArr.push(<DaysForecast key={days[i].dt} informDay={days[i]}/>)
 		}
 		return(
-			<div>
+			<div className='forecast__titlecity'>
 				<LocalTime timezone={timezone}/>
-				<div className='forecast__cities'>{city}, {country}</div>
+				<div className='forecast__titlecity-name'>{city}, {country}</div>
 				{daysForecastArr}
 			</div>
 		)

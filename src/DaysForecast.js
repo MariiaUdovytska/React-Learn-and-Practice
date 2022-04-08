@@ -4,7 +4,7 @@ import { Accordion } from 'react-bootstrap';
 class DaysForecast extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {isToggleOn: true}
+		this.state = {isToggleOn: false}
 	}
 
 	handleClick = (e) => {
@@ -34,6 +34,7 @@ class DaysForecast extends React.Component {
 						<span className='forecast__list-description'>
 							{weather[0].description}
 						</span>
+						<i class="bi bi-caret-down-fill" style={{ display: 'inline', marginLeft: '10px', marginTop: '2px',fontSize: '20px', color: 'cornflowerblue'}}></i>
 					</div>
 				</div>
 				{

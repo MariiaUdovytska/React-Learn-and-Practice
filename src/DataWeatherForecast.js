@@ -2,6 +2,7 @@ import React from 'react';
 import LocalTime from './LocalTime';
 import DaysForecast from './DaysForecast';
 import Forecast10 from './data/forecast-10.json'
+import { Accordion } from 'react-bootstrap';
 
 var isDebug = true;
 
@@ -64,7 +65,11 @@ class DataWeatherForecast extends React.Component {
 			<div className='forecast__titlecity'>
 				<LocalTime timezone={timezone}/>
 				<div className='forecast__titlecity-name'>{city}, {country}</div>
-				<div className='forecast__days'>{daysForecastArr}</div>
+				<div className='forecast__days'>
+	
+				{daysForecastArr}
+				
+				</div>
 			</div>
 		)
 	}

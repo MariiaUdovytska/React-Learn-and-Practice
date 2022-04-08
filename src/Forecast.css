@@ -4,7 +4,6 @@
 	margin: 20px 0px 0px 10px;
 }
 .forecast__search-actions{
-	display: flex;
 }
 .forecast__search-form{
 	display: flex;
@@ -45,3 +44,41 @@
  .forecast__btn-img img{
 	display: block;
 } 
+
+
+.forecast__titlecity{
+	margin-top: 30px;
+	line-height: 1.1;
+}
+.forecast__titlecity-name{
+	font-size: 25px;
+  font-weight: 700;
+  color: #39393a;
+}
+.forecast__days{
+	max-width: 395px;
+}
+.forecast__list{
+	 display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 50px;
+}
+.forecast__list-data{
+	display: flex;
+	flex: 0 0 30%;
+}
+.forecast__list-tempwdesc{
+	display: flex;
+	align-items: center;
+	width: 300px;
+	justify-content: space-between;
+}
+.forecast__list-temp{
+	display: flex;
+   align-items: center;
+}
+.forecast__list-description{
+	width: 130px;
+	text-align: right;
+}

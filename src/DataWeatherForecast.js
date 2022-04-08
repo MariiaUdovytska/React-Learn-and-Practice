@@ -64,7 +64,7 @@ class DataWeatherForecast extends React.Component {
 			<div className='forecast__titlecity'>
 				<LocalTime timezone={timezone}/>
 				<div className='forecast__titlecity-name'>{city}, {country}</div>
-				{daysForecastArr}
+				<div className='forecast__days'>{daysForecastArr}</div>
 			</div>
 		)
 	}

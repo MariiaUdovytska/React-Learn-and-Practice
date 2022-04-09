@@ -46,7 +46,7 @@ class DaysForecast extends React.Component {
 								<img src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`} alt="" width={55} height={55}></img>
 							</div>
 							<div className='forecast__sublist-description'>
-								<div>
+								<div className='forecast__sublist-description-up'>
 									<span>{weather[0].description}. Feels like {feels_like.day}°C</span>
 								</div>
 								<div>
@@ -55,7 +55,7 @@ class DaysForecast extends React.Component {
 							</div>
 						</div>
 						<div className='forecast__sublist-center'>
-							<ul className='forecast__sublist-center'>
+							<ul className='forecast__sublist-ul'>
 								<li><span>Humidity: {humidity+"%"}</span></li>
 								<li><span>Pressure: {pressure+"hPa"}</span></li>
 								<li><span>Speed: {speed+"m/s"}</span></li>

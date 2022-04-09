@@ -89,7 +89,6 @@
 	color: #535355;
 }
 
-
 .forecast__sublist{
 	padding: 10px;
 	background-color: rgba(255, 165, 91, 0.199);
@@ -97,6 +96,7 @@
 .forecast__sublist-up{
 	display: flex;
 	margin-bottom: 10px;
+
 }
 .forecast__sublist-img{}
 .forecast__sublist-description{

@@ -34,7 +34,12 @@ class DaysForecast extends React.Component {
 						<span className='forecast__list-description'>
 							{weather[0].description}
 						</span>
-						<i class="bi bi-caret-down-fill" style={{ display: 'inline', marginLeft: '10px', marginTop: '2px',fontSize: '20px', color: 'cornflowerblue'}}></i>
+						{
+							this.state.isToggleOn
+							? 
+							<i class="bi bi-caret-up-fill" style={{ display: 'inline', marginLeft: '10px',transform: 'rotate(550)' ,marginTop: '2px',fontSize: '20px', color: '#eb6e4b'}}></i>
+							: <i class="bi bi-caret-down-fill" style={{ display: 'inline', marginLeft: '10px',transform: 'rotate(550)' ,marginTop: '2px',fontSize: '20px', color: 'cornflowerblue'}}></i>
+						}
 					</div>
 				</div>
 				{

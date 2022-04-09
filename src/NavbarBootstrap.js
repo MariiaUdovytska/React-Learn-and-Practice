@@ -13,8 +13,8 @@ function Navibar(props){
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
 						<Nav className="ml-auto">
-						<Nav.Link href="#home">Dashboard</Nav.Link>
-						<Nav.Link href="#link">8-day forecast</Nav.Link>
+						<Nav.Link href="/">Dashboard</Nav.Link>
+						<Nav.Link href="/forecast">8-day forecast</Nav.Link>
 						<Nav.Link href="#link">About</Nav.Link>
 						{/* <NavDropdown title="Popular Cities" id="basic-nav-dropdown">
 							<NavDropdown.Item href="#action/3.1">Kharkiv</NavDropdown.Item>

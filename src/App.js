@@ -3,6 +3,7 @@ import AddWeatherCities from './AddWeatherCities';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navibar from './NavbarBootstrap';
 import Forecast from './Forecast';
+import  { BrowserRouter, HashRouter,Routes , Route } from 'react-router-dom';
 
 
 
@@ -10,10 +11,15 @@ function App() {
 	return (
 		<div className="App">
 			<div className='Wrapper'>
-				<Navibar firstHeader={{name:"Weather in any city"}}/>
-				<Forecast/>
-				<AddWeatherCities/>
-				
+				<BrowserRouter>
+					<Navibar firstHeader={{name:"Weather in any city"}}/>
+					{/* <Forecast/>
+					<AddWeatherCities/> */}
+					<Routes>
+						<Route exact path="/" element={<AddWeatherCities/>}/>
+						<Route path="/forecast" element={<Forecast/>} exact/>
+					</Routes>
+				</BrowserRouter>
 			</div>
 		</div>
 	);

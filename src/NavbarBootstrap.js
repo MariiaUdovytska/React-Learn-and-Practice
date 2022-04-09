@@ -1,5 +1,7 @@
 import React from "react"
 import {Navbar, Nav, Container, NavDropdown} from 'react-bootstrap';
+import {Link} from "react-router-dom";
+
 
 function Navibar(props){
 	return(
@@ -13,9 +15,12 @@ function Navibar(props){
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
 						<Nav className="ml-auto">
-						<Nav.Link href="/">Dashboard</Nav.Link>
-						<Nav.Link href="/forecast">8-day forecast</Nav.Link>
+						<Nav.Link><Link className="navbar__a" to="/">Dashboard</Link></Nav.Link>
+						<Nav.Link><Link className="navbar__a" to="/forecast">10-day forecast</Link></Nav.Link>
 						<Nav.Link href="#link">About</Nav.Link>
+						{/* <Nav.Link href="/">Dashboard</Nav.Link>
+						<Nav.Link href="/forecast">8-day forecast</Nav.Link>
+						<Nav.Link href="#link">About</Nav.Link> */}
 						{/* <NavDropdown title="Popular Cities" id="basic-nav-dropdown">
 							<NavDropdown.Item href="#action/3.1">Kharkiv</NavDropdown.Item>
 							<NavDropdown.Item href="#action/3.2">Kyiv</NavDropdown.Item>

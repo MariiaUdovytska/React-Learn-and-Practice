@@ -139,13 +139,16 @@ body {
   font-weight: 500;
 }
 .nav-link{
-	color:#1f1e1e!important;
 	font-size: 1.3rem!important;
 }
 .nav-link:hover{
 	color: #12127e !important;;
 	transition: all ease 0.5s;
 	text-shadow: 5px 5px 8px #0e7ad6;
+}
+.navbar__a{
+	text-decoration: none!important;
+	color:#1f1e1e!important;
 }
 
 

@@ -3,7 +3,7 @@ import AddWeatherCities from './AddWeatherCities';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navibar from './NavbarBootstrap';
 import Forecast from './Forecast';
-import  { BrowserRouter, HashRouter,Routes , Route } from 'react-router-dom';
+import  { BrowserRouter,Routes , Route} from 'react-router-dom';
 
 
 

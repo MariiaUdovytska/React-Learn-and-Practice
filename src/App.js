@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navibar from './NavbarBootstrap';
 import Forecast from './Forecast';
 import  { BrowserRouter,Routes , Route} from 'react-router-dom';
+import About from './About.js';
 
 
 
@@ -12,12 +13,13 @@ function App() {
 		<div className="App">
 			<div className='Wrapper'>
 				<BrowserRouter>
-					<Navibar firstHeader={{name:"Weather in any city"}}/>
+					<Navibar firstHeader={{name:"Weather"}}/>
 					{/* <Forecast/>
 					<AddWeatherCities/> */}
 					<Routes>
 						<Route exact path="/" element={<AddWeatherCities/>}/>
 						<Route path="/forecast" element={<Forecast/>} exact/>
+						<Route path="/about" element={<About/>} exact/>
 					</Routes>
 				</BrowserRouter>
 			</div>

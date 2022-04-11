@@ -1,13 +1,13 @@
 
 
 .forecast__search{
-	margin: 20px 0px 0px 10px;
+	padding: 0px 12px;
+	margin-top: 20px;
 }
 .forecast__search-actions{
 }
 .forecast__search-form{
 	display: flex;
-	margin-right: 20px;
 }
 .forecast__input{
 	background-color: rgb(253, 232, 222);
@@ -45,6 +45,24 @@
 	display: block;
 } 
 
+@media (max-width: 449px){
+	.forecast__days{
+		max-width: 360px!important;
+	}
+	.forecast__list-data{
+		font-size: 14px!important;
+		flex: 0 0 25%!important;
+	}
+	.forecast__list-tempwdesc{
+		width: 250px!important;
+	}
+	.forecast__list-temp{
+		font-size: 13px!important;
+	}
+	.forecast__list-description{
+		font-size: 11px!important;
+	}
+}
 
 .forecast__titlecity{
 	margin-top: 30px;

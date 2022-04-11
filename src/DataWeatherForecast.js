@@ -2,7 +2,6 @@ import React from 'react';
 import LocalTime from './LocalTime';
 import DaysForecast from './DaysForecast';
 import Forecast10 from './data/forecast-10.json'
-import { Accordion } from 'react-bootstrap';
 
 var isDebug = true;
 

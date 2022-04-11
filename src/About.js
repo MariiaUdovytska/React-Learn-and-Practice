@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import './About.css';
 
 class About extends React.Component {
 	constructor(props) {
@@ -12,9 +13,10 @@ class About extends React.Component {
 				<p className="about__p">This project gives you the opportunity to receive real-time detailed information about weather conditions and weather forecasts in any famous city in the world.</p>
 				<p className="about__p">This is my first project done in React using a component approach, using the API, hooking events and using the SPA approach. On this site you can see the current weather at a given time in a city or in several cities at once, as well as see a 10-day forecast, short and more general.</p>
 				<p className="about__contacts">
+					<span className="about__contacts-name">Developed by Maria Udovitskaya</span>
 					<span className="about__contacts-span">
 						<i class="bi bi-envelope-fill" style={{ display: 'inline', fontSize: '20px', color: '#eb6e4b'}}></i>
-						mariiaudovytska06@gmail.com
+						<span className="about__contacts-span-mail">mariiaudovytska06@gmail.com</span>
 					</span>
 					<span className="about__contacts-span">
 						<i class="bi bi-linkedin" style={{ display: 'inline', fontSize: '20px', color: '#eb6e4b'}}></i>

@@ -3,7 +3,7 @@ import LocalTime from './LocalTime';
 import DaysForecast from './DaysForecast';
 import Forecast10 from './data/forecast-10.json'
 
-var isDebug = true;
+var isDebug = false;
 
 class DataWeatherForecast extends React.Component {
 	constructor(props) {

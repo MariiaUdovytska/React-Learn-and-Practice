@@ -13,9 +13,8 @@ class Forecast extends React.Component {
 		e.preventDefault();
 		let inputValue = this.state.inputValue;
 		this.setState({
-			currentCity:inputValue
+			currentCity: inputValue
 		})
-		
 	}
 
 	handleUpdateInputValue = (e)=> {
@@ -36,7 +35,7 @@ class Forecast extends React.Component {
 							<img src={icon_search} className='forecast__btn-img' alt='search' width={30} height={30}></img>
 						</button>
 					</form>
-					<DataWeatherForecast cityName={this.state.currentCity}/>
+					<DataWeatherForecast key={this.state.currentCity} cityName={this.state.currentCity}/>
 				</div>
 			</div>
 		)

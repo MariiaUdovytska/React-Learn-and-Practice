@@ -3,7 +3,7 @@ import LocalTime from './LocalTime';
 import weatherResponse from './data/weatherResponse.json'
 
 
-var isDebug = true;
+var isDebug = false;
 
 
 class Weather extends React.Component {

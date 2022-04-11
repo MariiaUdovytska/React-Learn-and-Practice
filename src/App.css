@@ -103,32 +103,11 @@ body {
 .App {
   font-size: 16px;
 }
-/* .Header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.3rem;
-  letter-spacing: 0.03rem;
-  color: #1f1e1e;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.LogoWName {
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-}
-.LogoWName:hover {
-  color: #12127e;
-}
-.Logo__name {
-  margin-left: 10px;
-} */
+
+
 .container {
   max-width: 1352px !important;
 }
-
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -160,17 +139,27 @@ body {
 }
 
 
+
+.Weather__search{
+	padding: 0px 12px;
+}
 .Weather__search-actions{
 	display: flex;
-	margin: 20px 0px 0px 10px;
+	margin-top: 20px;
 }
 .Weather__search-form {
   display: flex;
   margin-right: 20px;
 }
+
+@media (max-width: 360px) {
+	.Weather__search-form{
+		margin-right: 10px;
+	}
+}
 .Weather__input {
   background-color: rgb(253, 232, 222);
-  width: 230px;
+  max-width: 220px;
   height: 40px;
   font-size: 18px;
   letter-spacing: 0.05em;
@@ -187,7 +176,6 @@ body {
 }
 
 .Weather__btn {
-
   background-color: rgba(233, 138, 94, 0.747);
   height: 40px;
   width: 40px;

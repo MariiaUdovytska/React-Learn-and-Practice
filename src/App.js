@@ -14,8 +14,6 @@ function App() {
 			<div className='Wrapper'>
 				<BrowserRouter>
 					<Navibar firstHeader={{name:"Weather"}}/>
-					{/* <Forecast/>
-					<AddWeatherCities/> */}
 					<Routes>
 						<Route exact path="/" element={<AddWeatherCities/>}/>
 						<Route path="/forecast" element={<Forecast/>} exact/>

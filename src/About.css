@@ -1,0 +1,44 @@
+.about{
+	margin: 15px auto;
+	padding: 0px 10px;
+	max-width: 500px;
+	text-align: justify;
+}
+p::first-letter{
+	padding-left: 10px;
+}
+.about__title{
+	color: #414142;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+}
+.about__p{
+	color: #444446;
+}
+.about__contacts{
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+.about__contacts-span{
+}
+.about__contacts-name{
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #444446;
+}
+.about__contacts-span-mail {
+	margin-left: 10px;
+	text-decoration: none;
+	color: #535353;
+}
+.about__contacts-span a{
+	margin-left: 10px;
+	text-decoration: none;
+	color: #535353;
+}
+.about__contacts-span a:hover{
+	color: #2f3a5e;
+}

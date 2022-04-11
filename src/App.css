@@ -138,6 +138,13 @@ body {
   text-transform: uppercase;
   font-weight: 500;
 }
+.navbar-toggler{
+	color: rgba(82, 131, 221, 0.938)!important;
+	border-color: rgba(82, 131, 221, 0.938)!important;
+}
+.navbar-toggler:focus{
+	box-shadow: 0 0 0 0.15rem!important;
+}
 .nav-link{
 	font-size: 1.3rem!important;
 }
@@ -149,6 +156,7 @@ body {
 .navbar__a{
 	text-decoration: none!important;
 	color:#1f1e1e!important;
+	text-transform: uppercase;
 }
 
 

@@ -75,14 +75,14 @@ class DaysForecast extends React.Component {
 									<th className='forecast__sublist-down-table-column'>Night</th>
 								</tr>
 								<tr className='forecast__sublist-down-table-row'>
-									<td className='forecast__sublist-down-table-temp'>Temperature</td>
+									<td className='forecast__sublist-down-table-temp'><div className='forecast__sublist-down-table-temp-enabled'>Temperature</div><div className='forecast__sublist-down-table-temp-desabled'>T</div></td>
 									<td className='forecast__sublist-down-table-temp'>{temp.morn}°C</td>
 									<td className='forecast__sublist-down-table-temp'>{temp.day}°C</td>
 									<td className='forecast__sublist-down-table-temp'>{temp.eve}°C</td>
 									<td className='forecast__sublist-down-table-temp'>{temp.night}°C</td>
 								</tr>
 								<tr className='forecast__sublist-down-table-row'>
-									<td className='forecast__sublist-down-table-feels'>Feels like</td>
+									<td className='forecast__sublist-down-table-feels'><div className='forecast__sublist-down-table-feels-enabled'>Feels like</div><div className='forecast__sublist-down-table-feels-desabled'>FL</div></td>
 									<td className='forecast__sublist-down-table-feels'>{feels_like.morn}°C</td>
 									<td className='forecast__sublist-down-table-feels'>{feels_like.day}°C</td>
 									<td className='forecast__sublist-down-table-feels'>{feels_like.eve}°C</td>

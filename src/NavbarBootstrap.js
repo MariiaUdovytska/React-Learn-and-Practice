@@ -18,9 +18,9 @@ function Navibar(props){
 					<Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
 						<Nav className="ml-auto">
-							<Nav.Link onClick={() => setExpanded(false)}><Link className="navbar__a" to="/">Dashboard</Link></Nav.Link>
-							<Nav.Link onClick={() => setExpanded(false)}><Link className="navbar__a" to="/forecast">10-day forecast</Link></Nav.Link>
-							<Nav.Link onClick={() => setExpanded(false)}><Link className="navbar__a" to="/about">About</Link></Nav.Link>
+							<Nav.Link onClick={() => setExpanded(false)}><Link className="navbar__a" to="/React-Weather-App/">Dashboard</Link></Nav.Link>
+							<Nav.Link onClick={() => setExpanded(false)}><Link className="navbar__a" to="/React-Weather-App/forecast">10-day forecast</Link></Nav.Link>
+							<Nav.Link onClick={() => setExpanded(false)}><Link className="navbar__a" to="/React-Weather-App/about">About</Link></Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
 				</Container>

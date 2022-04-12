@@ -15,9 +15,9 @@ function App() {
 				<BrowserRouter>
 					<Navibar firstHeader={{name:"Weather"}}/>
 					<Routes>
-						<Route exact path="/" element={<AddWeatherCities/>}/>
-						<Route path="/forecast" element={<Forecast/>} exact/>
-						<Route path="/about" element={<About/>} exact/>
+						<Route exact path="/React-Weather-App/" element={<AddWeatherCities/>}/>
+						<Route path="/React-Weather-App/forecast" element={<Forecast/>} exact/>
+						<Route path="/React-Weather-App/about" element={<About/>} exact/>
 					</Routes>
 				</BrowserRouter>
 			</div>

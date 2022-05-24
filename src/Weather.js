@@ -43,8 +43,6 @@ class Weather extends React.Component {
 			visibilities:datafff.visibility,
 			timezone:datafff.timezone/3600
 		});
-		console.log(datafff)
-		console.log(this.state.weather);
 	}
 	loadData = ()=>{
 
@@ -62,17 +60,19 @@ class Weather extends React.Component {
 			}
 		})
 		.then(response => {
-			response.json()
-			.then(this.mapData,
-			(error) => {
-				this.setState({
-					isLoaded: true,
-					error
-				});
-			});
+			if(response.ok)
+			{
+				return response
+				.json()
+				.then(this.mapData);
+			}
+			throw new Error(`Unknown city: ${this.props.location}`);
 		})
 		.catch(err => {
-			console.error(err);
+			this.setState({
+				isLoaded: true,
+				error: err
+			});
 		});
 	}
 

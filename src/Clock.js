@@ -4,16 +4,16 @@ import React from 'react';
 class Clock extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {date: new Date(), sum:{pill:1}, mult:1};
+		this.state = { date: new Date(), sum: { pill: 1 }, mult: 1 };
 	}
 
-	start = () =>{
+	start = () => {
 		this.timerId = setInterval(
 			() => this.tick(),
 			1000
 		);
 	}
-	stop = () =>{
+	stop = () => {
 		clearInterval(this.timerId);
 	}
 
@@ -32,7 +32,7 @@ class Clock extends React.Component {
 		let sumMult = this.state.mult;
 		this.setState({
 			date: new Date(),
-			mult: sumMult+1
+			mult: sumMult + 1
 		});
 	}
 

@@ -6,7 +6,7 @@ import './Forecast.css';
 class Forecast extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {inputValue:'', currentCity:'London'}
+		this.state = { inputValue: '', currentCity: 'London' }
 	}
 
 	handleSearch = (e) => {
@@ -17,7 +17,7 @@ class Forecast extends React.Component {
 		})
 	}
 
-	handleUpdateInputValue = (e)=> {
+	handleUpdateInputValue = (e) => {
 		const val = e.target.value;
 		this.setState({
 			inputValue: val
@@ -25,17 +25,17 @@ class Forecast extends React.Component {
 	}
 
 
-	render(){
-		return(
+	render() {
+		return (
 			<div className='forecast__search'>
 				<div className='forecast__search-actions'>
 					<form className='forecast__search-form' onSubmit={this.handleSearch}>
-						<input value={this.state.inputValue} onChange={this.handleUpdateInputValue} className='forecast__input' placeholder='city...' aria-label='Search'/>
+						<input value={this.state.inputValue} onChange={this.handleUpdateInputValue} className='forecast__input' placeholder='city...' aria-label='Search' />
 						<button type='submit' className='forecast__btn'>
 							<img src={icon_search} className='forecast__btn-img' alt='search' width={30} height={30}></img>
 						</button>
 					</form>
-					<DataWeatherForecast key={this.state.currentCity} cityName={this.state.currentCity}/>
+					<DataWeatherForecast key={this.state.currentCity} cityName={this.state.currentCity} />
 				</div>
 			</div>
 		)

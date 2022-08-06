@@ -3,7 +3,7 @@ import React from 'react';
 class LocalTime extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {date: new Date()};
+		this.state = { date: new Date() };
 	}
 
 	componentDidMount() {
@@ -25,11 +25,11 @@ class LocalTime extends React.Component {
 	calcTime(offset) {
 		var d = new Date();
 		var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-		return new Date(utc + (3600000*offset));
+		return new Date(utc + (3600000 * offset));
 	}
 
-	render(){
-		return(
+	render() {
+		return (
 			<div>{this.state.date.toLocaleString('en-US', {
 				day: 'numeric', // numeric, 2-digit
 				month: 'short', // numeric, 2-digit, long, short, narrow

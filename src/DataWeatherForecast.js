@@ -52,18 +52,28 @@ class DataWeatherForecast extends React.Component {
 
 	render() {
 		const { city, country, timezone, days } = this.state;
+
+		var result = days.reduce((acc, item) => {
+			var date = item.dt_txt.split(' ')[0]
+			if (acc[date]) {
+				acc[date].push(item)
+			} else {
+				acc[date] = [item]
+			}
+			return acc;
+		}, {});
+		let groups = Object.getOwnPropertyNames(result).map(k => result[k]);
+
 		let daysForecastArr = [];
-		for (let i = 0; i < days.length; i++) {
-			daysForecastArr.push(<DaysForecast key={days[i].dt} informDay={days[i]} />)
+		for (let i = 0; i < groups.length; i++) {
+			daysForecastArr.push(<DaysForecast key={groups[i][0].dt} informDay={groups[i]} />)
 		}
 		return (
 			<div className='forecast__titlecity'>
 				<LocalTime timezone={timezone} />
 				<div className='forecast__titlecity-name'>{city}, {country}</div>
 				<div className='forecast__days'>
-
 					{daysForecastArr}
-
 				</div>
 			</div>
 		)

@@ -107,7 +107,6 @@ class Weather extends React.Component {
 				</div>
 			)
 		}
-
 	}
 }
 

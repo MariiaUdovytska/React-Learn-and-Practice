@@ -94,27 +94,27 @@ h6 {
 
 html,
 body {
-  font-family: "Roboto", sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 body {
-  background: linear-gradient(to bottom right, #dae1e9, 80%, #0e7ad6) no-repeat;
+	background: linear-gradient(to bottom right, #dae1e9, 80%, #0e7ad6) no-repeat;
 }
 .App {
-  font-size: 16px;
+	font-size: 16px;
 }
 
 
 .container {
-  max-width: 1352px !important;
+	max-width: 1352px !important;
 }
 .navbar-brand {
-  display: flex;
-  align-items: center;
-  font-size: 1.3rem !important;
-  letter-spacing: 0.03rem !important;
-  color: #1f1e1e !important;
-  text-transform: uppercase;
-  font-weight: 500;
+	display: flex;
+	align-items: center;
+	font-size: 1.3rem !important;
+	letter-spacing: 0.03rem !important;
+	color: #1f1e1e !important;
+	text-transform: uppercase;
+	font-weight: 500;
 }
 .navbar-toggler{
 	color: rgba(82, 131, 221, 0.938)!important;
@@ -147,8 +147,8 @@ body {
 	margin-top: 20px;
 }
 .Weather__search-form {
-  display: flex;
-  margin-right: 20px;
+	display: flex;
+	margin-right: 20px;
 }
 
 @media (max-width: 360px) {
@@ -157,32 +157,32 @@ body {
 	}
 }
 .Weather__input {
-  background-color: rgb(253, 232, 222);
-  max-width: 220px;
-  height: 40px;
-  font-size: 18px;
-  letter-spacing: 0.05em;
-  padding-left: 10px;
-  background-clip: unset;
-  border: unset;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 0;
+	background-color: rgb(253, 232, 222);
+	max-width: 220px;
+	height: 40px;
+	font-size: 18px;
+	letter-spacing: 0.05em;
+	padding-left: 10px;
+	background-clip: unset;
+	border: unset;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 0;
 }
 .Weather__input:focus {
-  border: 2px solid rgba(233, 138, 94, 0.747);
+	border: 2px solid rgba(233, 138, 94, 0.747);
 }
 
 .Weather__btn {
-  background-color: rgba(233, 138, 94, 0.747);
-  height: 40px;
-  width: 40px;
-  border: unset;
-  border-top-left-radius: 0;
-  border-top-right-radius: 7px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 7px;
+	background-color: rgba(233, 138, 94, 0.747);
+	height: 40px;
+	width: 40px;
+	border: unset;
+	border-top-left-radius: 0;
+	border-top-right-radius: 7px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 7px;
 }
 
 .Weather__btn:hover{
@@ -191,7 +191,7 @@ body {
 	border-bottom: 1px solid rgba(241, 128, 76, 0.747);
 }
 .Weather__btn-img img {
-  display: block;
+	display: block;
 }
 
 .Weather__delete{
@@ -206,34 +206,34 @@ body {
 
 
 .Weather {
-  margin-top: 30px;
-  display: inline-block;
-  line-height: 1.1;
-  padding: 10px;
-  max-width: 337px;
+	margin-top: 30px;
+	display: inline-block;
+	line-height: 1.1;
+	padding: 10px;
+	max-width: 337px;
 }
 .Weather__city {
-  font-size: 25px;
-  font-weight: 700;
-  color: #39393a;
+	font-size: 25px;
+	font-weight: 700;
+	color: #39393a;
 }
 .Weather__temp {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  font-size: 36px;
-  color: #39393a;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	font-size: 36px;
+	color: #39393a;
 }
 .Weather__temp-maxmin {
-  margin: 10px;
-  font-size: 20px;
+	margin: 10px;
+	font-size: 20px;
 }
 .Weather__temp-maxmin span:first-child {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 .Weather__description {
-  font-size: 20px;
-  font-weight: 500;
+	font-size: 20px;
+	font-weight: 500;
 }
 .Weather__description-second {
   display: inline-block;

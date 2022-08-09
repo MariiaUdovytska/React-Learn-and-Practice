@@ -1,4 +1,5 @@
 import React from 'react';
+import ForecastHours from './ForecastHours';
 
 class DaysForecast extends React.Component {
 	constructor(props) {
@@ -13,7 +14,17 @@ class DaysForecast extends React.Component {
 	}
 
 	render() {
-		const { dt, weather, main, wind } = this.props.informDay;
+		const { dt, weather, main, wind, visibility } = this.props.informDay[0];
+
+		let hoursData = [...this.props.informDay];
+		hoursData.shift();
+		// console.log(hoursData);
+
+		let hoursForecastArr = [];
+		for (let i = 0; i < hoursData.length; i++) {
+			hoursForecastArr.push(<ForecastHours key={hoursData[i].dt} informHours={hoursData[i]} />)
+		}
+
 		let date = new Date(dt * 1000);
 		return (
 			<div onClick={this.handleClick}>
@@ -44,53 +55,39 @@ class DaysForecast extends React.Component {
 				{
 					this.state.isToggleOn
 						?
-						<div className='forecast__sublist'>
-							<div className='forecast__sublist-up'>
-								<div className='forecast__sublist-img'>
-									<img src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`} alt="" width={55} height={55}></img>
-								</div>
-								<div className='forecast__sublist-description'>
-									<div className='forecast__sublist-description-up'>
-										<span>{weather[0].description}. Feels like {main.feels_like}°C</span>
+						<>
+							<div className='forecast__sublist'>
+								<div className='forecast__sublist-up'>
+									<div className='forecast__sublist-img'>
+										<img src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`} alt="" width={55} height={55}></img>
 									</div>
-									<div>
-										<span>The high will be {main.temp_max}°C, the low will be {main.temp_min}°C</span>
+									<div className='forecast__sublist-description'>
+										<div className='forecast__sublist-description-up'>
+											<span>{weather[0].description}. Feels like {main.feels_like}°C</span>
+										</div>
+										<div>
+											<span>The high will be {main.temp_max}°C, the low will be {main.temp_min}°C</span>
+										</div>
 									</div>
 								</div>
+								<div className='forecast__sublist-center'>
+									<ul className='forecast__sublist-ul'>
+										<li><span>Humidity: {main.humidity + "%"}</span></li>
+										<li><span>Pressure: {main.pressure + "hPa"}</span></li>
+										<li><span>Speed: {wind.speed + "m/s"}</span></li>
+										<li><span>Visibility: {visibility / 1000 + "km"}</span></li>
+										<li><span>Sea level: {main.sea_level + "m"}</span></li>
+									</ul>
+								</div>
 							</div>
-							<div className='forecast__sublist-center'>
-								<ul className='forecast__sublist-ul'>
-									<li><span>Humidity: {main.humidity + "%"}</span></li>
-									<li><span>Pressure: {main.pressure + "hPa"}</span></li>
-									<li><span>Speed: {wind.speed + "m/s"}</span></li>
-								</ul>
+							<div className='forecast__sublist-hours'>
+								<div className='forecast__sublist-hours-row'>
+									<ul>
+										{hoursForecastArr}
+									</ul>
+								</div>
 							</div>
-							<div className='forecast__sublist-down'>
-								<table className='forecast__sublist-down-table'>
-									{/* <tr className='forecast__sublist-down-table-row'>
-										<th className='forecast__sublist-down-table-column'></th>
-										<th className='forecast__sublist-down-table-column'>Morning</th>
-										<th className='forecast__sublist-down-table-column'>Afternoon</th>
-										<th className='forecast__sublist-down-table-column'>Evening</th>
-										<th className='forecast__sublist-down-table-column'>Night</th>
-									</tr> */}
-									{/* <tr className='forecast__sublist-down-table-row'>
-										<td className='forecast__sublist-down-table-temp'><div className='forecast__sublist-down-table-temp-enabled'>Temperature</div><div className='forecast__sublist-down-table-temp-desabled'>T</div></td>
-										<td className='forecast__sublist-down-table-temp'>{temp.morn}°C</td>
-										<td className='forecast__sublist-down-table-temp'>{temp.day}°C</td>
-										<td className='forecast__sublist-down-table-temp'>{temp.eve}°C</td>
-										<td className='forecast__sublist-down-table-temp'>{temp.night}°C</td>
-									</tr>
-									<tr className='forecast__sublist-down-table-row'>
-										<td className='forecast__sublist-down-table-feels'><div className='forecast__sublist-down-table-feels-enabled'>Feels like</div><div className='forecast__sublist-down-table-feels-desabled'>FL</div></td>
-										<td className='forecast__sublist-down-table-feels'>{feels_like.morn}°C</td>
-										<td className='forecast__sublist-down-table-feels'>{feels_like.day}°C</td>
-										<td className='forecast__sublist-down-table-feels'>{feels_like.eve}°C</td>
-										<td className='forecast__sublist-down-table-feels'>{feels_like.night}°C</td>
-									</tr> */}
-								</table>
-							</div>
-						</div>
+						</>
 						: ""
 				}
 			</div>

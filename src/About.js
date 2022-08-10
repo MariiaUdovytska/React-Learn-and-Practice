@@ -11,7 +11,7 @@ class About extends React.Component {
 			<div className="about">
 				<h1 className="about__title">About</h1>
 				<p className="about__p">This project gives you the opportunity to receive real-time detailed information about weather conditions and weather forecasts in any famous city in the world.</p>
-				<p className="about__p">This is my first project done in React using a component approach, using the API, hooking events and using the SPA approach. On this site you can see the current weather at a given time in a city or in several cities at once, as well as see a 10-day forecast, short and more general.</p>
+				<p className="about__p">This is my first project done in React using a component approach, using the API, hooking events and using the SPA approach. On this site you can see the current weather at a given time in a city or in several cities at once, as well as see a 5&nbsp;-&nbsp;day forecast, short and more general with the weather for every day by the hour .</p>
 				<p className="about__contacts">
 					<span className="about__contacts-name">Developed by Maria Udovitskaya</span>
 					<span className="about__contacts-span">

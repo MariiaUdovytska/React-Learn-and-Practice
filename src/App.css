@@ -59,25 +59,25 @@ button {
 }
 
 button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+	padding: 0;
+	border: 0;
 }
 
 a,
 a:visited {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 ul li {
-  list-style: none;
+	list-style: none;
 }
 
 img {
-  vertical-align: top;
+	vertical-align: top;
 }
 
 h1,
@@ -86,8 +86,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: 400;
+	font-size: inherit;
+	font-weight: 400;
+}
+
+p::first-letter{
+	padding-left: 0px!important;
 }
 
 /*--------------------*/
@@ -236,28 +240,28 @@ body {
 	font-weight: 500;
 }
 .Weather__description-second {
-  display: inline-block;
+	display: inline-block;
 }
 .Weather__description-second::first-letter {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .Weather__more {
-  color: #535355;
-  margin: 10px 0px;
+	color: #535355;
+	margin: 10px 0px;
 }
 .Weather__items {
-  display: flex;
-  flex-wrap: wrap;
-  line-height: 20px;
-  border-left: 1px solid #eb6e4b;
-  padding-left: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 20px;
+	border-left: 1px solid #eb6e4b;
+	padding-left: 20px;
 }
 .Weather__items li {
-  margin-right: 16px;
+	margin-right: 16px;
 }
 
 .Tick {
-  margin-top: 30px;
-  margin-bottom: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }

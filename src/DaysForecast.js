@@ -13,6 +13,27 @@ class DaysForecast extends React.Component {
 		}));
 	}
 
+	// handleTouchMove = (e) => {
+	// 	const touchDown = this.state.touchPosition
+
+	// 	if (touchDown === null) {
+	// 		return
+	// 	}
+
+	// 	const currentTouch = e.touches[0].clientX
+	// 	const diff = touchDown - currentTouch
+
+	// 	if (diff > 5) {
+	// 		this.rigthButtonClick()
+	// 	}
+
+	// 	if (diff < -5) {
+	// 		this.leftButtonClick()
+	// 	}
+
+	// 	this.setState({ touchPosition: null });
+	// }
+
 	render() {
 		const { dt, icon, description, main, wind, visibility } = this.props.informDay;
 
@@ -36,7 +57,7 @@ class DaysForecast extends React.Component {
 					<div className='forecast__list-tempwdesc'>
 						<div className='forecast__list-temp'>
 							<img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="" width={55} height={55}></img>
-							<span>{main.temp_min}°C / {main.temp_max}°C</span>
+							<span>{main.temp_min}°C {main.temp_max}°C</span>
 						</div>
 						<span className='forecast__list-description'>
 							{description}

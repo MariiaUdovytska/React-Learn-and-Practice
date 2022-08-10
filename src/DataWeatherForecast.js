@@ -9,6 +9,8 @@ class DataWeatherForecast extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			error: null,
+			isLoaded: false,
 			city: "",
 			country: "",
 			timezone: 0,
@@ -22,6 +24,7 @@ class DataWeatherForecast extends React.Component {
 
 	mapData = (response) => {
 		this.setState({
+			isLoaded: true,
 			city: response.city.name,
 			country: response.city.country,
 			timezone: response.city.timezone / 3600,
@@ -40,18 +43,24 @@ class DataWeatherForecast extends React.Component {
 		};
 
 		fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${this.props.cityName}&units=metric&appid=1874aca48ccdb4922f4bce5acc0cc837`, options)
-			.then(response => response.json())
-			.then(response => this.mapData(response))
+			.then(response => {
+				if (response.ok) {
+					return response
+						.json()
+						.then(this.mapData);
+				}
+				throw new Error(`Unknown city: ${this.props.cityName}`);
+			})
 			.catch(err => {
 				this.setState({
 					isLoaded: true,
-					err
+					error: err
 				});
 			});
 	}
 
 	render() {
-		const { city, country, timezone, days } = this.state;
+		const { error, isLoaded, city, country, timezone, days } = this.state;
 
 		var result = days.reduce((acc, item) => {
 			var date = item.dt_txt.split(' ')[0]
@@ -103,15 +112,22 @@ class DataWeatherForecast extends React.Component {
 		for (let i = 0; i < strange.length; i++) {
 			daysForecastArr.push(<DaysForecast key={strange[i].dt} informDay={strange[i]} />)
 		}
-		return (
-			<div className='forecast__titlecity'>
-				<LocalTime timezone={timezone} />
-				<div className='forecast__titlecity-name'>{city}, {country}</div>
-				<div className='forecast__days'>
-					{daysForecastArr}
+		if (error) {
+			return <p> Error {error.message}</p>
+		} else if (!isLoaded) {
+			return <p> Loading...</p>
+		} else {
+			return (
+				<div className='forecast__titlecity'>
+					<LocalTime timezone={timezone} />
+					<div className='forecast__titlecity-name'>{city}, {country}</div>
+					<div className='forecast__days'>
+						{daysForecastArr}
+					</div>
 				</div>
-			</div>
-		)
+			)
+		}
+
 	}
 }
 

@@ -14,12 +14,9 @@ class DaysForecast extends React.Component {
 	}
 
 	render() {
-		const { dt, weather, main, wind, visibility } = this.props.informDay[0];
+		const { dt, icon, description, main, wind, visibility } = this.props.informDay;
 
-		let hoursData = [...this.props.informDay];
-		hoursData.shift();
-		// console.log(hoursData);
-
+		let hoursData = this.props.informDay.hoursArr;
 		let hoursForecastArr = [];
 		for (let i = 0; i < hoursData.length; i++) {
 			hoursForecastArr.push(<ForecastHours key={hoursData[i].dt} informHours={hoursData[i]} />)
@@ -38,11 +35,11 @@ class DaysForecast extends React.Component {
 					</span>
 					<div className='forecast__list-tempwdesc'>
 						<div className='forecast__list-temp'>
-							<img src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`} alt="" width={55} height={55}></img>
-							<span>{main.temp}°C</span>
+							<img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="" width={55} height={55}></img>
+							<span>{main.temp_min}°C / {main.temp_max}°C</span>
 						</div>
 						<span className='forecast__list-description'>
-							{weather[0].description}
+							{description}
 						</span>
 						{
 							this.state.isToggleOn
@@ -59,11 +56,11 @@ class DaysForecast extends React.Component {
 							<div className='forecast__sublist'>
 								<div className='forecast__sublist-up'>
 									<div className='forecast__sublist-img'>
-										<img src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`} alt="" width={55} height={55}></img>
+										<img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="" width={55} height={55}></img>
 									</div>
 									<div className='forecast__sublist-description'>
 										<div className='forecast__sublist-description-up'>
-											<span>{weather[0].description}. Feels like {main.feels_like}°C</span>
+											<span>{description}. Feels like {main.feels_like}°C</span>
 										</div>
 										<div>
 											<span>The high will be {main.temp_max}°C, the low will be {main.temp_min}°C</span>

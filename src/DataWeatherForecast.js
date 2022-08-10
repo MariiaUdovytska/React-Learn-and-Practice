@@ -64,9 +64,44 @@ class DataWeatherForecast extends React.Component {
 		}, {});
 		let groups = Object.getOwnPropertyNames(result).map(k => result[k]);
 
-		let daysForecastArr = [];
+		let strange = [];
 		for (let i = 0; i < groups.length; i++) {
-			daysForecastArr.push(<DaysForecast key={groups[i][0].dt} informDay={groups[i]} />)
+			const group = groups[i];
+			let minTemp = group[0].main.temp_min;
+			let maxTemp = group[0].main.temp_max;
+			let indexMaxTemp = 0;
+			for (let j = 0; j < group.length; j++) {
+				if (group[j].main.temp_min < minTemp) {
+					minTemp = group[j].main.temp_min;
+				}
+				if (group[j].main.temp_max > maxTemp) {
+					maxTemp = group[j].main.temp_max;
+					indexMaxTemp = j;
+				}
+			}
+			strange.push({
+				dt: group[0].dt,
+				icon: group[indexMaxTemp].weather[0].icon,
+				main: {
+					temp_min: minTemp,
+					temp_max: maxTemp,
+					pressure: group[indexMaxTemp].main.pressure,
+					sea_level: group[indexMaxTemp].main.sea_level,
+					humidity: group[indexMaxTemp].main.humidity,
+					feels_like: group[indexMaxTemp].main.feels_like,
+				},
+				wind: {
+					speed: group[indexMaxTemp].wind.speed,
+				},
+				visibility: group[indexMaxTemp].visibility,
+				description: group[indexMaxTemp].weather[0].description,
+				hoursArr: group
+			});
+		}
+
+		let daysForecastArr = [];
+		for (let i = 0; i < strange.length; i++) {
+			daysForecastArr.push(<DaysForecast key={strange[i].dt} informDay={strange[i]} />)
 		}
 		return (
 			<div className='forecast__titlecity'>
